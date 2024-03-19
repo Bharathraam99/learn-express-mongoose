@@ -2,7 +2,7 @@ let Author = require('../models/author');
 
 get_author_list = async () => {
   let authors_list = [];
-  authors_list= await Author.find({}).exec()
+  authors_list= await Author.find().exec()
   return authors_list.map(function(author) {
     return author.name + " : " + author.lifespan;
   });
